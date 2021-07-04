@@ -1,0 +1,10 @@
+---
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: Google
+IndentWidth: '4'
+TabWidth: '4'
+UseTab: ForIndentation
+AlignConsecutiveAssignments: true
+AllowAllParametersOfDeclarationOnNextLine: false
+...
