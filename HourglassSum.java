@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class HourglassSum {
 
     public static int calculateHourGlassSum(int matrix[][]) {
@@ -18,6 +15,8 @@ public class HourglassSum {
                           0 x x x
                           1   x
                           2 x x x
+
+                          For (1,1) = (0,0) + (0,1) + (0,2) + (1,1) + (2,0) + (2,1) + (2,2)
                      */
                     int sum =
                         matrix[row][col] +
@@ -61,6 +60,12 @@ public class HourglassSum {
             { 0, 0, 1, 2, 4, 0 },
         };
 
+        System.out.println(
+            "Max Hourglass sum => " + calculateHourGlassSum(matrix1)
+        );
+        System.out.println(
+            "Max Hourglass sum => " + calculateHourGlassSum(matrix2)
+        );
         System.out.println(
             "Max Hourglass sum => " + calculateHourGlassSum(matrix3)
         );
