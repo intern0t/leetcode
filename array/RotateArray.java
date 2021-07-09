@@ -1,3 +1,4 @@
+package array;
 public class RotateArray {
 
     public static void rotateLeft(int array[], int rotateSteps) {
