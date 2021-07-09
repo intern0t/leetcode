@@ -1,9 +1,9 @@
-public class Stack {
+public class ArrayStack {
 
     private static int stack[];
     private static int TOP;
 
-    Stack(int capacity) {
+    ArrayStack(int capacity) {
         stack = new int[capacity];
         TOP = 0;
     }
@@ -50,7 +50,7 @@ public class Stack {
     }
 
     public static void main(String[] args) {
-        Stack stack = new Stack(10);
+        ArrayStack stack = new ArrayStack(10);
 
         for (int i = 0; i < 10; i++) {
             stack.push(i);
