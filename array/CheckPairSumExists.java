@@ -1,3 +1,4 @@
+package array;
 import java.util.*;
 
 public class CheckPairSumExists {
@@ -5,7 +6,7 @@ public class CheckPairSumExists {
     public static void main(String[] args) {
         int[][] test = { { 0, 1 }, { 2, 3 }, { 4, 5 }, { 6, 7 } };
 
-        System.out.println(checkPairSumExists(4, 2, test, 100) + ".");
+        System.out.println(checkPairSumExists(4, 2, test, 5) + ".");
     }
 
     static boolean checkPairSumExists(

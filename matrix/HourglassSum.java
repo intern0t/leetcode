@@ -1,3 +1,4 @@
+package matrix;
 public class HourglassSum {
 
     public static int calculateHourGlassSum(int matrix[][]) {

@@ -1,3 +1,4 @@
+package array;
 // https://leetcode.com/problems/container-with-most-water/
 // https://leetcode.com/problems/container-with-most-water/discuss/6100/Simple-and-clear-proofexplanation
 
