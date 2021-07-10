@@ -13,7 +13,6 @@ public class TopKFrequentWords {
                     ? a.getKey().compareTo(b.getKey())
                     : b.getValue() - a.getValue()
         );
-
         // There's no built-in heap in Java but PriorityQueue can be used to mimic heap.
 
         // O(n)
@@ -45,6 +44,6 @@ public class TopKFrequentWords {
         };
 
         System.out.println(topKFrequent(testStrings[0], 2)); // i, love
-        System.out.println(topKFrequent(testStrings[1], 1)); // movies
+        System.out.println(topKFrequent(testStrings[1], 2)); // movies
     }
 }
