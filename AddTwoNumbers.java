@@ -2,7 +2,7 @@
 
 public class AddTwoNumbers {
 
-    class ListNode {
+    static class ListNode {
 
         int val;
         ListNode next;
@@ -21,41 +21,42 @@ public class AddTwoNumbers {
 
     public static void main(String[] args) {
         //   If 342+465 = 807, [2 4 3] + [5 6 4] = [7 0 8]
+        ListNode first = new ListNode(2, new ListNode(4, new ListNode(3)));
+        ListNode second = new ListNode(5, new ListNode(6, new ListNode(4)));
+        ListNode answer = addTwoNumbers(first, second);
 
+        while (answer != null) {
+            System.out.print(answer.val + " -> ");
+            answer = answer.next;
+        }
     }
-    //   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-    //     ListNode answer = new ListNode(0);
-    //     int carry = 0;
 
-    //     while (l1 != null || l2 != null || carry != 0) {
-    //       int sum = (l1 != null ? l1.val : 0) + (l2 != null ? l2.val : 0) + carry;
-    //       int remainder = sum % 10;
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode answer, temp = new ListNode(0);
+        answer = temp;
 
-    //       carry = sum / 10;
-    //       ListNode node = new ListNode(remainder);
-    //       answer.next = node;
-    //       l1 = (l1.next == null) ? l1 : l1.next;
-    //       l2 = (l2.next == null) ? l2 : l2.next;
-    //     }
+        int carry = 0;
 
-    //     return answer;
-    //   }
+        while (l1 != null || l2 != null || carry != 0) {
+            int sum = 0;
 
-    //      int carry = 0;
-    //     ListNode p, dummy = new ListNode(0);
-    //     p = dummy;
-    //     while (l1 != null || l2 != null || carry != 0) {
-    //         if (l1 != null) {
-    //             carry += l1.val;
-    //             l1 = l1.next;
-    //         }
-    //         if (l2 != null) {
-    //             carry += l2.val;
-    //             l2 = l2.next;
-    //         }
-    //         p.next = new ListNode(carry%10);
-    //         carry /= 10;
-    //         p = p.next;
-    //     }
-    //     return dummy.next;
+            if (l1 != null) {
+                sum += l1.val;
+                l1 = l1.next;
+            }
+
+            if (l2 != null) {
+                sum += l2.val;
+                l2 = l2.next;
+            }
+
+            carry += sum;
+            int remainder = carry % 10;
+            carry /= 10;
+            answer.next = new ListNode(remainder);
+            answer = answer.next;
+        }
+
+        return temp.next;
+    }
 }
