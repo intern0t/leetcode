@@ -26,6 +26,9 @@ class ValidAnagram {
             }
         }
 
+        // The mapping part can definitely be optimized further by using 2 hash maps but
+        // at the cost of increased space.
+
         for (char c : mapped.keySet()) {
             if (mapped.get(c) != 0) {
                 return false;
